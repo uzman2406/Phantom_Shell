@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="PhantomShell — a local AI ghost that explains terminal commands.">
+  <title>PhantomShell — The Terminal Has a Ghost</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="PhantomShell home">
+        <span class="brand-mark">P<span>✦</span></span>
+        <span>PHANTOM<span class="brand-dim">SHELL</span></span>
+      </a>
+      <div class="top-meta">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">CONNECTING TO THE SPIRIT WORLD</span>
+        <span class="model-pill" id="modelPill">LOCAL MODEL</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span></span> AN OPEN-SOURCE AI EXPERIMENT</div>
+      <h1>The terminal<br>has a <em>ghost.</em></h1>
+      <p class="hero-copy">Speak your command. The spirit will reveal what it does.<br>
+        Your secrets stay in your machine. No cloud. No summoning fee.</p>
+    </section>
+
+    <section class="console-card" aria-label="PhantomShell chat">
+      <div class="console-top">
+        <div class="window-controls"><i></i><i></i><i></i></div>
+        <div class="console-title"> séance.exe <span>— LOCAL SESSION</span></div>
+        <button class="icon-button" id="clearButton" title="Clear conversation" aria-label="Clear conversation">↺</button>
+      </div>
+
+      <div class="chat-area" id="chatArea" aria-live="polite">
+        <div class="message ghost-message">
+          <div class="avatar ghost-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="Ghost icon">
+              <path d="M12 53V29C12 16.8 20.8 7 32 7s20 9.8 20 22v24l-9-6-11 7-11-7-9 6Z" />
+              <ellipse cx="25" cy="29" rx="3" ry="5" class="ghost-eye"/>
+              <ellipse cx="39" cy="29" rx="3" ry="5" class="ghost-eye"/>
+              <path d="M27 40q5 5 10 0" class="ghost-mouth"/>
+            </svg>
+          </div>
+          <div class="message-content">
+            <div class="speaker">PHANTOM <span>JUST NOW</span></div>
+            <div class="bubble">
+              <p>Ahh… a visitor. Welcome to the machine.</p>
+              <p>Give me a command, mortal. I shall tell you what stirs beneath its surface. I promise not to execute a single keystroke.</p>
+              <div class="whisper">THE CURSOR IS WATCHING YOU <b>✧</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="suggestions" id="suggestions">
+        <span class="suggestion-label">TRY SUMMONING</span>
+        <button class="suggestion" data-prompt="rm -rf old_backups/">rm -rf old_backups/ <span>↗</span></button>
+        <button class="suggestion" data-prompt="git push --force">git push --force <span>↗</span></button>
+        <button class="suggestion" data-prompt="sudo chmod -R 777 /">sudo chmod -R 777 / <span>↗</span></button>
+      </div>
+
+      <form class="composer" id="chatForm">
+        <span class="prompt-symbol">›_</span>
+        <input id="messageInput" type="text" maxlength="4000"
+          placeholder="Whisper a command to the ghost..." autocomplete="off"
+          aria-label="Enter a command or question">
+        <button class="send-button" id="sendButton" type="submit">
+          <span>SUMMON</span><b>↗</b>
+        </button>
+      </form>
+      <div class="console-foot">
+        <span><kbd>ENTER</kbd> TO SUMMON</span>
+        <span>YOUR COMMAND IS INSPECTED, NEVER EXECUTED</span>
+      </div>
+    </section>
+
+    <section class="feature-row">
+      <article><span class="feature-icon">◈</span><div><h3>LOCAL BY NATURE</h3><p>Powered by Ollama on your machine.</p></div></article>
+      <article><span class="feature-icon">⛨</span><div><h3>YOUR DATA, YOURS</h3><p>No third-party AI API or cloud upload.</p></div></article>
+      <article><span class="feature-icon">✧</span><div><h3>OPEN WEIGHTS</h3><p>Swap models. Keep control.</p></div></article>
+    </section>
+
+    <footer>
+      <span>PHANTOMSHELL <b>v2.0</b></span>
+      <span>MADE IN THE SPIRIT OF OPEN INNOVATION <i>✦</i></span>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
